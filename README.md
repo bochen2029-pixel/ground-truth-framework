@@ -39,6 +39,7 @@ Narrative-form synthesis treatments demonstrating how the framework's full discr
 
 Currently:
 - **`tori_vs_debra.md`** — *Same Wound, Opposite Immune Response.* Compare-contrast synthesis of the Tori-class (TB-OD, diagnostic channel) and Debra-class (H-elim, eliminative channel) architectures under v5.5. The framework's clearest empirical anchor for the Output-Channel Principle. Applies every major v5.5 addition. ~63K chars; structurally complete.
+- **`what_tori_really_wanted.md`** — *What Tori Really Wanted.* Final-form inquiry into the architecture of layer-coherent friendship under v5.5, anchored in the documented Tori-Brent dynamic and the parallel diagnostic-pass trajectory. Treats the within-architecture counterpart-relation: what a TB-OD subject's substrate is structurally seeking, what is destroyed when a counterpart fails the diagnostic, what is produced when a counterpart sustains it across substrate-time. ~75K chars.
 
 See `worked_examples/README.md` for the directory's full purpose and indexing.
 
