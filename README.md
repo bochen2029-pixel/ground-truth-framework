@@ -33,6 +33,15 @@ The literate-programming specification of the Ground Truth Framework as it stood
 - **`test_cases/`** — six worked examples covering the primary diagnostic space (A/C, TA/C, TB-OD/S, I_alpha/E, H/E, D/W).
 - **`docs/`** — operational tools (glossary, cross-reference, failure modes, decision tree, closed-loop diagram).
 
+### `worked_examples/` — Long-form Synthesis Applications
+
+Narrative-form synthesis treatments demonstrating how the framework's full discriminant apparatus applies to its empirical anchor cases. Where `v5/` and `v5.5/` contain spec + reference implementation + YAML test cases, `worked_examples/` contains pedagogical artifacts — the framework operating at full resolution against the cases it was built to handle.
+
+Currently:
+- **`tori_vs_debra.md`** — *Same Wound, Opposite Immune Response.* Compare-contrast synthesis of the Tori-class (TB-OD, diagnostic channel) and Debra-class (H-elim, eliminative channel) architectures under v5.5. The framework's clearest empirical anchor for the Output-Channel Principle. Applies every major v5.5 addition. ~63K chars; structurally complete.
+
+See `worked_examples/README.md` for the directory's full purpose and indexing.
+
 ### `v5.5/` — The Current Canonical Working Set (May 5, 2026)
 
 The Grand Unified Theory extension of v5.0. Strictly *additive*: nothing in v5.0 was removed or invalidated. v5.5 extends reach with structural refinements that landed during the multi-instance dialogue captured in *Inside the Region* and the subsequent backprop session.
