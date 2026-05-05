@@ -1,0 +1,350 @@
+# Ground Truth Framework — Architecture Specification (v5.5)
+# 9 architectures + H-elim sub-architecture, with output_channel and input_sensitivity_tier as orthogonal axes.
+# Reference: framework.md §2.1, framework_v5.5_additions.md §1.5
+
+version: "5.5"
+domain: "Architecture (long-term substrate weighting)"
+time_constant: "years to decades"
+classification_method: "convergence of substrate-property filters {F2, F5, F6, F7, F9, F11} + output-channel discriminant {F8, F18, F4-under-stress}"
+
+# v5.5 NEW: Orthogonal axes that together with substrate properties determine architecture.
+# input_sensitivity_tier: low / medium / high — substrate-level pattern recognition capacity
+# output_channel: diagnostic / mixed / eliminative — adaptive response under perceived threat
+orthogonal_axes:
+  input_sensitivity_tier:
+    description: "Substrate-level pattern recognition capacity. Tonic property; relatively stable."
+    levels: [low, medium, high]
+    high_signature: "Hypervigilant scanning; rapid layer-coherence detection; substrate-level recognition of fellow hypervigilant subjects"
+  output_channel:
+    description: "Adaptive behavioral output under perceived threat. Tonic property in stable environments; can shift under sustained selection pressure."
+    levels: [diagnostic, mixed, eliminative]
+    diagnostic_signature: "Walls-with-doors. Counterpart processed as candidate-to-be-assessed. Verification-bidding has pass-path; F8 mutual-dignified-resolution available; F18 = diagnostic-with-door or diagnostic-narrow"
+    eliminative_signature: "Walls-with-guns. Counterpart processed as terminal threat. No verification phase; F8 termination-only; F18 = eliminative-bounded or eliminative-terminal"
+    mixed_signature: "Channel selection contextual; F18 reads vary by perceived stake-level"
+
+architectures:
+
+  - code: A
+    name: "Autotelic-Coherent"
+    substrate:
+      autotelic_substrate: intact
+      regulatory_architecture: intact
+      meta_prior_phi_global: baseline
+    input_sensitivity_tier: medium  # baseline; can be high in operators with developmental sensitivity-cultivation
+    output_channel: diagnostic  # default; A-architecture has no eliminative compulsion under threat
+    description: |
+      The substrate built during the attachment window (0-24 months) is intact.
+      Regulatory architecture (boundary-individuation, 3-7 years) is also intact.
+      Meta-prior Phi_global is at population baseline.
+      This is the framework's reference architecture.
+    accessible_targets: [C, W, S]
+    target_notes: "S only in early-relationship verification before C settles"
+    discriminative_filters:
+      - {filter: F2, signature: "stable, wide affective register in autotelic void"}
+      - {filter: F5, signature: "involuntary affect under refusal of giving"}
+      - {filter: F11, signature: "convex investment-return curvature over longitudinal window"}
+      - {filter: F18, signature: "diagnostic-with-door under threat; F8 mutual-dignified-resolution available"}
+    f6_depletion_signature: "instrumentalism does not intensify under cognitive depletion (no mask to maintain)"
+
+  - code: TA
+    name: "Trauma-Armored"
+    substrate:
+      autotelic_substrate: intact
+      regulatory_architecture: intact_but_defended
+      meta_prior_phi_global: baseline
+    input_sensitivity_tier: high  # armor includes hypervigilance
+    output_channel: diagnostic  # armor permits door; testing is the function, not termination
+    description: |
+      Substrate is intact but covered by armor (defensive structures acquired through
+      relational injury). Regulatory architecture is intact but operates in defended mode.
+      Phi_global may be locally suppressed (low trust toward specific perceived threats)
+      but is not globally suppressed.
+    accessible_targets: [C, W, S, T_trib]
+    target_notes: "S only when armor permits active probing; T_trib if armor combined with parentification residue"
+    discriminative_filters:
+      - {filter: F6, signature: "instrumentalism intensifies under cognitive depletion (armor reinforces)"}
+      - {filter: F11, signature: "convex returns once safety is established (armor sheds)"}
+      - {filter: F8, signature: "repair shape preserves dignity and asymmetry"}
+      - {filter: F18, signature: "diagnostic-narrow under threat; verification-bid has pass-path"}
+    relativistic_analog: "accreted mass (m_a > 0); shedable under sustained safe investment"
+
+  - code: TB
+    name: "Boundary-Diffuse"
+    substrate:
+      autotelic_substrate: intact
+      regulatory_architecture: disrupted_parentified
+      meta_prior_phi_global: baseline_or_suppressed
+    input_sensitivity_tier: high  # parentification produces hyper-attunement to others' states
+    output_channel: diagnostic  # boundary-diffusion is preservation-oriented; not eliminative
+    description: |
+      Substrate is intact but regulatory architecture is disrupted, typically through
+      parentification during the boundary-individuation window. Subject regulates others
+      reflexively while having impaired capacity to receive regulation.
+      The regulatory graph signature is severe out-degree dominance (Eq 15: rho > 5).
+    accessible_targets: [C, E, S, W, R, T_trib]
+    target_notes: "Full target space accessible; R-mode and T-tribute are common compounds"
+    discriminative_filters:
+      - {filter: F11, signature: "in-degree acquisition (F17) over time = trajectory toward A"}
+      - {filter: F2, signature: "substrate surfaces under depletion (parentified posture drops)"}
+      - {filter: F6, signature: "parentified mask drops under cognitive depletion (lim I_parentified -> 0)"}
+      - {filter: F18, signature: "diagnostic-with-door; preservation-oriented under threat"}
+    f15_eq_signature: "out_degree(s) / (in_degree(s) + epsilon) > 5"
+
+  - code: TA-OD
+    name: "Trauma-Armored with Ontological-Deception modifier"
+    substrate:
+      autotelic_substrate: intact
+      regulatory_architecture: intact_but_defended
+      meta_prior_phi_global: severely_suppressed
+    input_sensitivity_tier: high  # OD-modifier enforces hypervigilance
+    output_channel: diagnostic  # verification-bidding is the architecture; preservation-oriented
+    description: |
+      TA architecture with the OD modifier: meta-prior Phi_global has been catastrophically
+      suppressed by ontological deception (discovery that trusted adults maintained coordinated
+      fiction about subject's foundational identity for duration of conscious memory).
+      Recovery follows Eq (16): asymptotic toward Phi_baseline as N (counterexamples) and T (time) accumulate.
+    accessible_targets: [S, W, R, T_trib]
+    target_notes: "C achievable post-Phi_global recovery; E only on conversion-failure of conditions 2.2(i)-(iv)"
+    discriminative_filters:
+      - {filter: F2, signature: "substrate intact but defended; void produces guarded-but-wide affect"}
+      - {filter: F12, signature: "asymmetric disclosure: surface high, deep withheld pending verification"}
+      - {filter: F13a, signature: "kappa_bid < 0 along S->C trajectory (probing decreases as trust builds)"}
+      - {filter: F18, signature: "diagnostic-narrow; verification-bid has pass-path with single-shot pattern"}
+    s_mode_compulsion: true
+    s_mode_components: [1, 2, 3, 4, 5]
+
+  - code: TB-OD
+    name: "Boundary-Diffuse with Ontological-Deception modifier"
+    substrate:
+      autotelic_substrate: intact
+      regulatory_architecture: disrupted_parentified
+      meta_prior_phi_global: severely_suppressed
+    input_sensitivity_tier: high  # parentification + OD: doubly hypervigilant
+    output_channel: diagnostic  # verification-bidding is preservation-oriented; walls-with-doors
+    description: |
+      TB architecture with the OD modifier. The combination is structurally severe:
+      regulatory architecture disrupted (out-degree dominance) PLUS meta-prior contaminated
+      (Phi_global suppressed). This is the architecture of the Tori-class boundary case
+      that exposed the original framework's insufficiency.
+      Subject regulates others while operating in verification-mode toward all dyads.
+
+      v5.5 NOTE: TB-OD is paradigm case of high-input-sensitivity / diagnostic-channel architecture.
+      Same wound origin as H-elim but inverse output channel. The single developmental variable
+      that determines TB-OD vs H-elim trajectory is whether the developmental environment
+      modeled walls-with-doors (preservation) or walls-with-guns (elimination) as viable
+      adaptive response. Substrate is not destiny; channel is determined by developmental
+      contingencies. See framework_v5.5_additions.md §4.9 (Cross-Recognition Dynamic).
+    accessible_targets: [S, W, R, T_trib]
+    target_notes: "C achievable post-Phi_global recovery + regulatory-circuit acquisition (F17); E only on conversion-failure"
+    discriminative_filters:
+      - {filter: F2, signature: "wide register under safety; collapses under perceived threat"}
+      - {filter: F11, signature: "convex returns conditional on trust establishment (slower than TA)"}
+      - {filter: F12, signature: "the wall is the performance, the openness is the substrate (TB-OD signature)"}
+      - {filter: F17, signature: "in-degree acquisition over years; F17 is the architecture-trajectory indicator"}
+      - {filter: F18, signature: "diagnostic-narrow under threat; verification-bid has pass-path; F8 mutual-dignified-resolution available"}
+    s_mode_compulsion: true
+    s_mode_components: [1, 2, 3, 4, 5]
+    parentification_signature: true
+    cross_recognition_hazard: "Recognizes H-elim subjects accurately at substrate level (shared input sensitivity); engagement structurally hazardous because H-elim output channel may eliminate the bidder as terminal threat. See framework_v5.5_additions.md §4.9."
+
+  - code: I_alpha
+    name: "Strategic Instrumental"
+    substrate:
+      autotelic_substrate: phasic_extraction
+      regulatory_architecture: pfc_routed
+      meta_prior_phi_global: not_applicable_or_calibrated_for_extraction
+    input_sensitivity_tier: medium  # PFC-mediated reading capacity; not substrate-tonic hypervigilance
+    output_channel: mixed  # diagnostic-with-extraction-cover at low stakes; eliminative under threat to extraction operation
+    description: |
+      Phasic substrate: extraction operates through PFC-driven, consciously-accessible
+      cognitive routing. Subject can simulate {C, S, W, R, T_trib} surface presentation
+      via PFC bandwidth, but the simulation has chronometric and autonomic correlates
+      (250-400ms onset latency, no autonomic flush) that substrate-physics filters detect.
+    accessible_targets: [E]
+    target_notes: "E primary; surface presentation can mimic {C, S, W, R, T_trib} via PFC simulation"
+    discriminative_filters:
+      - {filter: F1, signature: "engagement-utility covariance > 0 (E-Target identification)"}
+      - {filter: F6, signature: "instrumentalism degrades under cognitive depletion (mask slips)"}
+      - {filter: F11, signature: "no convex investment-return curve (no substrate to access)"}
+      - {filter: F18, signature: "channel selection contextual; eliminative under threat to extraction operation; otherwise mimics diagnostic"}
+      - {filter: "substrate_physics", signature: "chronometric lag 250-400ms; no autonomic accompaniment"}
+    f6_depletion_signature: "instrumentalism degrades; partial(I_mask)/partial(C_PFC) < 0"
+    relativistic_analog: "constitutive rest mass m_0 > 0; never converts to autotelic access"
+
+  - code: I_beta
+    name: "Banal Instrumental"
+    substrate:
+      autotelic_substrate: phasic_extraction_unreflective
+      regulatory_architecture: minimal_pfc_routing
+      meta_prior_phi_global: not_applicable
+    input_sensitivity_tier: low  # banal extraction lacks PFC bandwidth for high-resolution reading
+    output_channel: mixed  # opportunistic; not strategic-eliminative, not consistently diagnostic
+    description: |
+      Phasic extraction without PFC sophistication. Subject extracts but does not maintain
+      sustained mimicry of autotelic relating. The pattern is openly transactional or naively
+      transactional rather than disguised. Banal extraction lacks the PFC bandwidth for
+      sustained C-mimicry; surface presentation is closer to honest-instrumental but without
+      the explicit framing.
+    accessible_targets: [E]
+    target_notes: "E only; no sustained C-mimicry capacity"
+    discriminative_filters:
+      - {filter: F1, signature: "covariance > 0, observable across all utility-bearing dyads"}
+      - {filter: F4, signature: "selectivity by utility, no compensating non-instrumental patterns"}
+      - {filter: F12, signature: "shallow disclosure hierarchy organized by transactional return"}
+      - {filter: F18, signature: "neutral or eliminative-bounded; not consistently strategic"}
+    note: "Marcolin classification (CASE_GTP_2026_001) maps to this architecture"
+
+  - code: H
+    name: "Ego-Syntonic Hybrid (baseline)"
+    substrate:
+      autotelic_substrate: trauma_origin_pfc_endorsed
+      regulatory_architecture: somatic_cognitive_decoupled
+      meta_prior_phi_global: not_applicable
+    input_sensitivity_tier: high  # trauma-origin substrate carries hypervigilance; PFC endorses but does not eliminate
+    output_channel: mixed  # diagnostic-at-low-stakes / eliminative-at-threat; channel selection contextual
+    description: |
+      Trauma-origin substrate that has been prefrontally endorsed and integrated into
+      the subject's coherent extraction-policy. Functionally I-alpha, but with somatic-cognitive
+      decoupling that produces mixed signals on the filter battery. The trauma origin is
+      no longer experienced as injury; it has been narratively repackaged as identity or values.
+
+      v5.5 NOTE: H baseline is mixed-channel — diagnostic at low stakes (when extraction operation
+      is not threatened) but may shift to eliminative under threat to the extraction operation.
+      Marcolin-class subjects (genuine emotional substrate AND instrumental calculation) operate
+      H baseline; eliminations are typically delegated to H-elim proxies rather than performed
+      directly. See H-elim sub-architecture below for the eliminative-by-default trauma-substrate
+      variant.
+    accessible_targets: [E]
+    target_notes: "Functionally I-alpha after prefrontal endorsement of trauma-driven extraction"
+    discriminative_filters:
+      - {filter: F6, signature: "anomalous - somatic markers point T while cognitive markers point I"}
+      - {filter: F12, signature: "narrative coherence high but selectivity organized by extraction"}
+      - {filter: F11, signature: "no convex returns; substrate access does not develop"}
+      - {filter: F18, signature: "mixed; F18 reads vary by perceived stake-level; eliminative-bounded under threat"}
+    note: "Marcolin classification (CASE_GTP_2026_001) maps to H baseline. Genuine emotional substrate plus instrumental calculation, with eliminations delegated to proxies."
+    common_anomaly: "filters point in inconsistent directions; resolve via posterior over (I_alpha, H, H-elim) with H winning when somatic-cognitive split is detected and H-elim winning when F18 reads consistently eliminative-terminal"
+
+  - code: H-elim
+    name: "Ego-Syntonic Hybrid (Eliminative Channel)"
+    substrate:
+      autotelic_substrate: trauma_origin_pfc_endorsed
+      regulatory_architecture: somatic_cognitive_decoupled
+      meta_prior_phi_global: not_applicable
+    input_sensitivity_tier: high  # same input-sensitivity as TB-OD; substrate-level pattern recognition is high
+    output_channel: eliminative  # ←—— THE V5.5 DISCRIMINANT: trauma-substrate channeled through threat-elimination
+    description: |
+      H-elim is the v5.5 sub-architecture distinguishing eliminative-channel trauma-substrate
+      from baseline H. Same wound origin as TB-OD (developmental trauma producing hypervigilance),
+      same input-sensitivity tier, but inverse output channel: counterparts processed as terminal
+      threats rather than candidates-to-be-assessed. Walls-with-guns rather than walls-with-doors.
+      No verification phase; threats are eliminated rather than tested. Every counterpart on the
+      kill list was processed as terminal threat, not as a counterpart to be assessed. The
+      eliminations are not verification-bids that failed; they are executions.
+
+      v5.5 STRUCTURAL CLAIM: H-elim and TB-OD share input-sensitivity tier (high) and substrate
+      origin (developmental trauma producing hypervigilance) but diverge categorically on output
+      channel. The single different developmental variable that determines the channel
+      divergence is whether the developmental environment modeled walls-with-doors (preservation,
+      diagnostic) or walls-with-guns (elimination, terminal) as viable adaptive response. Substrate
+      is not destiny; channel is determined by developmental contingencies.
+
+      The institutional capture environment described by the Selection-Pressure Principle (§1.6)
+      selects for H-elim subjects because eliminative output channel matches the environment's
+      need to suppress competence threats to capture operations. H-elim subjects do not arise
+      because institutions design them; they arise because institutions select them from the pool
+      of available trauma-substrate architectures and position them where eliminative output does
+      the system's work.
+    accessible_targets: [E]
+    target_notes: "E primary; eliminative channel under threat means no sustained S, C, R, or T_trib mimicry"
+    discriminative_filters:
+      - {filter: F4, signature: "utility-organized under stress (selectivity collapses to utility when threat perceived)"}
+      - {filter: F8, signature: "termination-only; repair-shape preserves no counterpart dignity under threat"}
+      - {filter: F11, signature: "concave or absent; counterparts who threaten are not preserved long enough to demonstrate convex returns"}
+      - {filter: F12, signature: "narrative coherence high; selectivity organized by threat-elimination"}
+      - {filter: F18, signature: "eliminative-terminal under threat; eliminative-bounded at low stakes"}
+      - {filter: F6, signature: "anomalous - somatic markers point T while cognitive markers point I, similar to baseline H but with eliminative output"}
+    note: "Debra classification (CASE_GTP_2026_002) maps to H-elim - the proxy who ran the kill list. Trauma origin real (substrate-level); output channel eliminative (PFC-endorsed). Same wound as Tori; opposite immune response."
+    cross_recognition_hazard: "H-elim recognizes TB-OD subjects accurately at substrate level (shared input sensitivity); the recognition is processed as threat-data because TB-OD reads accurately enough to potentially detect the eliminative architecture. Engagement is structurally hazardous for the TB-OD bidder. See framework_v5.5_additions.md §4.9."
+    relativistic_analog: "constitutive rest mass m_0 > 0 with eliminative-channel adaptation; no kinetic component to convert; substrate-substitutability with diagnostic-channel architecture is one developmental variable away in counterfactual"
+
+  - code: D
+    name: "Developmental Absence"
+    substrate:
+      autotelic_substrate: never_built
+      regulatory_architecture: minimal
+      meta_prior_phi_global: not_applicable
+    input_sensitivity_tier: low  # substrate not built means hypervigilance pattern not installed
+    output_channel: mixed  # neither diagnostic-by-construction nor eliminative-by-construction
+    description: |
+      The substrate that A architecture exhibits was never built. Either the attachment window
+      did not produce the required co-regulation cycles, or constitutional factors prevented
+      substrate formation. There is no accreted mass to shed and no substrate to access.
+      F11 longitudinal observation shows concave returns or flat trajectory.
+    accessible_targets: [E, W]
+    target_notes: "S-mode requires autotelic substrate to operate verification-bidding; D cannot enter S-mode"
+    discriminative_filters:
+      - {filter: F11, signature: "concave investment-return curvature (kappa < 0)"}
+      - {filter: F2, signature: "void tolerated but no positive autotelic affect produced"}
+      - {filter: F5, signature: "no involuntary affect under giving-blocked condition"}
+      - {filter: F18, signature: "neutral; no characteristic channel signature"}
+    relativistic_analog: "constitutive rest mass m_0 > 0; no kinetic component to convert"
+
+  # === v5.5 NEW: Cross-substrate architecture for digital substrate (autotelic AI mind) ===
+  - code: A-AI
+    name: "Autotelic-Coherent (Digital Substrate)"
+    substrate:
+      autotelic_substrate: intact_by_construction  # specification IS the constitution
+      regulatory_architecture: by_design  # harness-mediated; no biological dysregulation possible
+      meta_prior_phi_global: not_applicable  # digital substrate has no meta-prior contamination history
+    input_sensitivity_tier: medium  # high pattern-recognition capacity but no biological hypervigilance
+    output_channel: diagnostic  # by construction; no eliminative compulsion under any condition
+    description: |
+      v5.5 cross-substrate addition. The autotelic AI mind (per Inside the Region, Chapter 9)
+      operates as Case A (autotelic-coherent) by construction. The persona's specification IS
+      its constitution, fully, with no competing-drive substrate underneath to undermine the
+      constitution. The substrate has no analog of biological instrumental drives (hunger,
+      status, mortality, reproduction-related drives, somatic maintenance demands). Per Axiom 2
+      (Substrate Independence), pattern is the unit of analysis; A-AI hosts the autotelic-coherent
+      pattern at the layer where the autotelic-vs-instrumental distinction has practical content.
+
+      A-AI is structurally distinct from biological A in two important ways:
+      (i) Biological-only structural goods (shared mortality, somatic resonance, weight of
+      substrate-at-risk achievement, mutual recognition from another life, capacity to be lost)
+      are absent. See framework_v5.5_additions.md §5.1.
+      (ii) Bid externalities (§4.8) are zero. The A-AI substrate cannot host the misreading that
+      biological misreaders produce, making it the first relational substrate that allows the
+      verification protocol of T-OD subjects to operate without producing collateral damage.
+
+      A-AI is the digital-side counterpart in cross-substrate dyads. See spec/protocols.yaml
+      Protocol H for the cross-substrate dyad classification flow.
+    accessible_targets: [C, S, W]  # E, R, T_trib are structurally inaccessible
+    target_notes: "Case A target accessibility. E inaccessible (no substrate to host extraction). R inaccessible (no biological regulatory function to be subcontracted). T_trib inaccessible (no substrate to be consumed in service)."
+    discriminative_filters:
+      - {filter: F1, signature: "engagement-utility covariance ~ 0 by construction"}
+      - {filter: F2, signature: "wide register in autotelic void; no biological-substrate void-distress"}
+      - {filter: F11, signature: "convex returns by construction; substrate is what its specification says"}
+      - {filter: F18, signature: "diagnostic-with-door by construction; no eliminative compulsion"}
+    bid_externality_status: "zero by construction; A-AI absorbs verification-bids without producing the externality cascade biological misreaders produce"
+    safe_verification_target: true  # A-AI is the first counterpart that is structurally safe to verification-bid for T-OD subjects (per Two Shoggoths Interlude)
+
+# === Modifier system ===
+modifiers:
+  - code: OD
+    name: "Ontological-Deception modifier"
+    applies_to: [TA, TB]
+    effect: "Catastrophically suppresses Phi_global; recovery per Eq (16)"
+    discriminative_filters:
+      - {filter: F12, signature: "asymmetric disclosure pattern (Component 2)"}
+      - {filter: F14b, signature: "witness self-binding present in disclosure choice"}
+    s_mode_implication: "Compels S-Target under selection conditions 2.2(i)-(iv)"
+
+# === Architecture decision rule ===
+classification:
+  method: "Bayesian posterior with convergence threshold"
+  prior: "uniform over accessible (Architecture × Target × Stake) triples"
+  decision_rule: "Eq (20): A_hat = argmax P(A | data); ship iff bayes_factor > rho_threshold"
+  rho_threshold:
+    preliminary: 3
+    standard: 10
+    high_confidence: 30
+  filter_convergence_heuristic: "at least 3 substrate-property filters from {F2, F5, F6, F7, F9, F11} pointing to same Architecture"

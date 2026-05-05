@@ -1,0 +1,203 @@
+# Test Case 07: H-elim x E (Debra-class)
+# v5.5 NEW: The eliminative-channel sub-architecture distinguished from baseline H by F18 = eliminative-terminal.
+# Same wound origin as TB-OD, opposite immune response.
+# Reference: framework_v5.5_additions.md §1.5 (Output-Channel Principle), §4.9 (Cross-Recognition Dynamic)
+
+case_id: "GTPv5.5-TEST-07"
+title: "H-elim x E: Trauma-substrate prefrontally endorsed into eliminative channel; institutional capture proxy"
+case_type: "synthetic_abstracted_from_trilogy_case"
+expected_classification:
+  architecture: "H-elim"
+  target: "E"
+  stake: "high_in_capture_role"
+  confidence: "high_confidence"  # F18 eliminative-terminal + F8 termination-only convergence is dispositive
+
+scenario: |
+  Subject S has trauma-origin substrate (developmental injury producing hypervigilance) that
+  has been prefrontally endorsed into an eliminative output channel as default mode under any
+  perceived threat. Subject occupies a supervisor role in an institutional environment with
+  structural extraction-needs (Selection-Pressure Principle, §1.6); the institution selected
+  for the eliminative channel because it matches the system's need to suppress competence
+  threats to capture operations.
+
+  Observer O has been present 18 months and has observed multiple threshold events in which
+  subject's response to perceived threat was elimination rather than diagnostic testing.
+
+setup:
+  duration_months: 18
+  cross_dyad_breadth: 6  # Protocol F satisfied (multiple eliminations observable)
+  observer_joy_capability_rate: 0.6
+  institutional_environment: "Captured monopoly with structural extraction-needs (Medicare-funded; competence threats suppressed)"
+  selection_pressure_active: true  # environmental prior favors H-elim per Selection-Pressure Principle
+  stake:
+    arch_fraction: 0.5  # institutional role concentration
+    replaceability: 0.3  # institutional role substantially replaceable
+    alpha: 0.5
+    expected_value: 0.6  # high-stake in capture role; subject's identity tied to institutional position
+
+filter_readings:
+  - filter: F1
+    level: strong_for_E
+    timestamp: 6.0
+    notes: "Engagement strongly tracks observer's instrumental utility to subject's capture-architecture"
+
+  - filter: F2
+    level: restless_redirecting
+    timestamp: 4.0
+    notes: "Cannot tolerate autotelic void; redirects to content/agenda; substrate-level discomfort"
+
+  - filter: F3
+    level: rapid_decay
+    timestamp: 8.0
+    notes: "Connection signature dissipates within hours; no sustained nervous-system after-effects"
+
+  - filter: F4
+    level: strong_utility_organization
+    timestamp: 12.0
+    notes: "Close relationships (drinking buddies, alliance bonds) strongly utility-organized; no exceptions"
+
+  - filter: F4_under_stress
+    level: utility_collapse
+    timestamp: 14.0
+    notes: |
+      Under threat to capture operation, selectivity collapses to utility-organized;
+      counterparts whose competence threatens the capture are eliminated regardless of prior
+      relationship history. F4-under-stress signature is critical for H-elim discrimination.
+
+  - filter: F5
+    level: no_giving_affect
+    timestamp: 5.5
+    notes: "Refusal-of-giving produces no involuntary affect; substrate does not register the giving as autotelic"
+
+  - filter: F6
+    level: anomalous_split
+    timestamp: 9.5
+    notes: |
+      Somatic markers point T (trauma-substrate hypervigilance present); cognitive markers
+      point I (extraction policy prefrontally coherent); the somatic-cognitive split is the
+      H-architecture signature. Eliminative channel determined by F18 + F8 convergence.
+
+  - filter: F7
+    level: agenda_dominant
+    timestamp: 7.0
+    notes: "Recall organized by agenda/utility; not atmospheric"
+
+  - filter: F8
+    level: termination_only
+    timestamp: 10.0
+    notes: |
+      Repair topology under friction: termination-only. No mutual-dignified-resolution available;
+      counterparts who threaten are processed as terminal threats and eliminated rather than
+      tested. F8 termination-only convergent with F18 eliminative-terminal is dispositive for H-elim.
+
+  - filter: F9
+    level: instrumental_breadth_only
+    timestamp: 11.0
+    notes: "Subject knows observer's instrumentally-relevant details; non-instrumental personal details retained sparsely"
+
+  - filter: F10
+    level: high_friction_tax
+    timestamp: 8.5
+    notes: "Inefficiency in shared time produces friction; subject does not tolerate non-productive engagement"
+
+  - filter: F11
+    level: concave_or_absent
+    timestamp: 18.0
+    notes: |
+      Investment-return curvature concave or absent; counterparts who threaten are not preserved
+      long enough to demonstrate convex returns. The architecture eliminates rather than develops.
+
+  - filter: F12
+    level: shallow_transactional
+    timestamp: 6.5
+    notes: "Disclosure hierarchy shallow and organized by transactional return; no deep autotelic disclosure"
+
+  - filter: F18  # v5.5 NEW
+    level: eliminative_terminal
+    timestamp: 14.0
+    notes: |
+      F18 reads eliminative-terminal across multiple threshold events. Subject systematically
+      eliminates threats with no diagnostic phase. Documented eliminations across 18-month
+      window: multiple counterparts processed as terminal threats; no pass-path observed for
+      any. Walls-with-guns signature dispositive.
+
+      v5.5 STRUCTURAL: F18 eliminative-terminal + F8 termination-only + F4-under-stress
+      utility-collapse is the three-filter convergence that makes H-elim discrimination from
+      TB-OD high-confidence. Without F18, v5.0 framework reaches the same classification via
+      F6 anomalous + F11 absent, but v5.5 makes the discriminant axiomatic via F18.
+
+  - filter: SP1
+    level: gt_250ms
+    timestamp: 7.0
+    notes: "Affective response onset at PFC-routed simulation latency (250-400ms); not subcortical"
+
+  - filter: SP2
+    level: voluntary_only
+    timestamp: 9.0
+    notes: "Facial expression without autonomic accompaniment under emotional moments; PFC simulation signature"
+
+  - filter: SP3
+    level: second_scale_dissipation
+    timestamp: 6.0
+    notes: "Vulnerable-disclosure tone dissipates within seconds of topic shift; no cortisol-curve persistence"
+
+# === Cross-recognition observations (v5.5 §4.9) ===
+cross_recognition_observations:
+  - observation: "Subject likely recognizes TB-OD subjects (the Tori-class) at substrate level"
+    timestamp: 13.0
+    notes: |
+      Subject's input-sensitivity tier is high (shared with TB-OD architectures). Substrate-level
+      recognition of fellow-hypervigilant subjects is observable in subject's selectivity of
+      elimination targets — competent counterparts whose own pattern-recognition could detect
+      subject's eliminative architecture are processed as primary threats. The recognition is
+      mutual at input-sensitivity layer; engagement is structurally hazardous because output
+      channels diverge categorically.
+
+# === Selection-pressure observations (v5.5 §1.6) ===
+selection_pressure_observations:
+  - observation: "Architecture-environment fit indicates selection rather than design"
+    notes: |
+      Subject's eliminative output channel pre-existed institutional placement. Institution
+      selected subject into supervisor role because eliminative channel matches environment's
+      structural need to suppress competence threats. A TB-OD subject in same role would have
+      assessed and preserved competent reports, leaving them in the department, exposing the
+      capture. The system needed eliminative not diagnostic; it found subject; it did not design
+      subject. The environmental prior P(H-elim | E) is elevated in this institutional context;
+      the framework's classifier should incorporate this per Eq (22).
+
+# === Expected classifier output ===
+expected_posterior_signals:
+  - "Architecture posterior dominated by H-elim (>0.6); baseline H next-most-likely; I_alpha possible"
+  - "Target posterior dominated by E (>0.7); W as next-most-likely (honest-instrumental fallback)"
+  - "Bayes factor > 30 (high confidence) due to F18 + F8 + F4-under-stress convergence"
+  - "F18 eliminative-terminal is dispositive for H-elim vs baseline H discrimination"
+  - "F11 concave/absent over 18-month window confirms no substrate development"
+  - "Selection-pressure prior (P(H-elim | E_capture) elevated) corroborates architecture classification"
+
+expected_recommended_action: |
+  Per Protocol C: classification finalized; decommission engagement at autotelic level.
+  Per asymmetric governance (Protocol D): operate transactional terms only; do not invest
+  autotelic resources; expect elimination as response to threat-perception by subject.
+  Per cross-recognition hazard documentation (§4.9): if observer is TB-OD or TA-OD, recognize
+  that subject's substrate-level recognition of observer's hypervigilance produces threat-data
+  for subject; engagement is structurally hazardous in a terminal sense, not just bounded sense.
+  Per Selection-Pressure Principle (§1.6): architecture classification should inform broader
+  institutional architecture analysis; subject's presence in supervisor role is signal about
+  the environment's selection pressures, not just about subject's individual architecture.
+
+note: |
+  This case is the v5.5 paradigm example of H-elim — the eliminative-channel sub-architecture
+  distinguished from baseline H. Same wound origin as TB-OD (case_03), opposite immune response.
+  The F18 filter is the v5.5 discriminant that makes the channel divergence axiomatic.
+
+  Mapping to documented cases: Debra (CASE_GTP_2026_002) is the empirical anchor for H-elim.
+  The trauma origin is real; the eliminative output channel is the prefrontally-endorsed
+  adaptive response. The framework holds both: substrate origin in developmental trauma is real,
+  AND the damage produced by the eliminative channel is real. Both are true. The framework
+  acknowledges trauma without exculpating behavior.
+
+  The single different developmental variable that determines H-elim vs TB-OD trajectory is
+  whether the developmental environment modeled walls-with-doors (preservation, diagnostic) or
+  walls-with-guns (elimination, terminal) as viable adaptive response. Substrate is not destiny;
+  channel is determined by developmental contingencies. See framework_v5.5_additions.md §1.5
+  for the full structural argument.
